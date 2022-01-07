@@ -1,0 +1,125 @@
+#bottomdiv {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  height: 40px;
+  background-color: #ffffff;
+  background-image: url('../Images/waveflat.png');
+  background-repeat: repeat-x;
+  background-position: 2px 32px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 15;
+  font-weight: bold;
+}
+
+
+a:link,a:visited {
+  color: blue;
+}
+
+body {
+  font-family: arial;
+  font-size: x-small;
+  padding: 0px;
+  padding-top: 40px;
+  margin: 5px;
+  background-color: white;
+  background-image: url('../Images/wave.png');
+  background-repeat: repeat-x;
+}
+
+#content {
+  margin: 9px;
+}
+
+.do { 
+  position: relative;
+  background-image: url(images/dothis.png);
+  background-repeat: no-repeat;
+  background-position: 2px 2px;
+  width: 100%;
+  padding: 1px;
+  padding-left: 60px;
+  text-align: left;
+  margin: 15px;
+  margin-left: 30px;
+}
+
+.dolist {
+  position: relative;
+  top: -34px;
+  left: 65px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+}
+
+.egimg {
+  text-align: center;
+}
+
+.wdone {
+  font-weight: bold;
+}
+
+/* 
+ * result div - shows results of an action
+ * next to shop frame
+ */
+.res {
+  position: absolute; 
+  top: 140; 
+  left: 325; 
+  width: 360;
+  display: none;
+  padding: 15px;
+  padding-bottom: 20px;
+  background-color: #fbf8e8;
+  border-style: none;
+  border-width: 1px;
+  border-color: black;
+}
+
+.desc { 
+  display: none;
+}
+
+#desc {
+  height: 50px;
+}
+
+
+.cnrImg {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+#resbshadow {
+  background-image: url('images/bshadow.png');
+  background-repeat: repeat-x;
+  height: 24px;
+  display: none;
+  position: absolute;
+}
+
+#reshshadow {
+  background-image: url('images/rshadow.png');
+  background-repeat: repeat-y;
+  width: 27px;
+  display: none;
+  position: absolute;
+}
+
+.instr {
+  width: 600px;
+}

@@ -1,0 +1,19 @@
+<input type="hidden"/>
+<style type="text/css">td, th { text-align: left; } body * {font-size:10px;} .bbclickable { cursor: pointer;} td.bbclickable:hover { text-decoration: underline; }</style>
+<script type="text/javascript" defer="true">
+  function adjustcol(id) { 
+    var td = document.getElementById(id);
+    window.parent.badboyPopupElement.style[id] =
+      prompt('Enter a new value for '+id,window.parent.badboyPopupElement.currentStyle[id]);
+  }
+</script>
+<table width="100%" style="font-size:10px;">
+<tr><th align=left>$tagName</th><td>$idMsg $classNameMsg</td></tr>
+<tr><th align=left>Position:</th><td>$pos ($dim)</td></tr>
+<tr><th align=left>Margin:</th><td id="margin" class='bbclickable' onclick="adjustcol('margin');">$marginLeft $marginTop $marginRight $marginBottom</td></tr>
+<tr><th align=left>Padding:</th><td id="padding" class='bbclickable' onclick="adjustcol('padding');">$paddingLeft $paddingTop $paddingRight $paddingBottom</td></tr>
+<tr><th align=left>background-color:</th><td id="backgroundColor" class='bbclickable' onclick="adjustcol('backgroundColor');">$backgroundColor</td></tr>
+<tr><th align=left>color:</th><td id="color" onclick="adjustcol('color');" class='bbclickable'>$color</td></tr>
+<tr><th align=left>z-Index:</th><td id="zIndex" onclick="adjustcol('zIndex');" class='bbclickable'>$zIndex</td></tr>
+</table>
+

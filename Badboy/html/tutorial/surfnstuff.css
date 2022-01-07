@@ -1,0 +1,40 @@
+body {
+  font-family: arial;
+  font-size: 10px;
+  background-color: #ffffff;
+  background-image: url('../Images/waveflat.png');
+  background-repeat: repeat-x;
+  padding-top: 10px;
+}
+
+h2 {
+  font-family: arial;
+  font-size: 11px;
+  margin-bottom: 0px;
+}
+
+p { 
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+input {
+  font-family: arial;
+  font-size: 10px;
+}
+
+a:link,a:visited {
+  color: blue;
+}
+
+form {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+table tr td {
+  font-family: arial;
+  font-size: 10px;
+}
+
+
