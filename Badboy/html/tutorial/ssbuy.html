@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="surfnstuff.css"/>
+    <script language="JavaScript" src="ss.js"></script>
+    <script language="JavaScript">
+      function setItem() {
+        var u = document.location.href.toString().split('?');
+        if(u.length && (u.length > 1)) {
+          var param = u[1].split('=');
+          var item = parseInt(param[1]);
+          document.getElementById('itemName').innerHTML=items[item].name;
+          document.getElementById('itemPrice').innerHTML=items[item].price;
+          setCookie('item',item);
+        }
+        else {
+          item = getCookie('item');
+          document.getElementById('itemName').innerHTML=items[item].name;
+          document.getElementById('itemPrice').innerHTML=items[item].price;
+        }
+      }
+    </script>
+  </head>
+  <body onload="setItem();">
+    <h2>Badboy's Surf'n Stuff Shop - Checkout</h2>
+    <p>What a great choice!</p>
+    <p style="text-align: center; padding: 0px">
+    <form name="buyForm" action="ssthankyou.html">
+        <input type="hidden" name="item" value=""/>
+        <table border="0">
+          <tr><td>Item:</td><td id="itemName">Surf'n Flippers</td></tr>
+          <tr><td>Total:</td><td id="itemPrice">12.00</td></tr>
+          <tr><td >Gift Wrapped? </td><td><input style="position: relative; top: 0px; height: 8px; margin: 0px; padding: 0px" type="checkbox" name="giftwrap"/></td></tr>
+          <tr><td>&nbsp;</td><td width="100px" align="right"><input type="Submit" onclick="window.parent.surfnClick('purchase');" value="Purchase"/></td></tr>
+        </table>
+      </form>
+    </p>
+  </body>
+</html>
+

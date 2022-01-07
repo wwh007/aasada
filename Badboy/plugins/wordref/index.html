@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <title>Word Document Importer</title>
+    <style type="text/css">
+      html,body {
+        overflow: auto;
+      }
+      * {
+        font-family: arial;
+      }
+      h1 {
+        font-size: 14px;
+      }
+      fieldset {
+        float: left;
+        font-size: 12px;
+        padding: 6px;
+      }
+      fieldset div {
+        margin: 5px;
+      }
+      body {
+        background-color: #eee;
+      }
+      br {
+        clear: both;
+      }
+    </style>
+    <script type="text/javascript">
+      function doImport() {
+        var fn = document.settingsForm.fileName;
+        if(fn.value=='') {
+          alert("Please enter the file name of the document you wish to import from");
+          fn.style.border='solid red 2px;';
+          fn.focus();
+          return;
+        }
+        var badboy = window.external;
+        var word = badboy.plugin.createObject("Word.Application");
+        var doc = word.Documents.open(fn.value);
+        var count = doc.Paragraphs.Count;
+        var importCount = 0;
+        for(i=1; i<count; ++i) {
+          var p = doc.Paragraphs.Item(i);
+          var cb = document.getElementById('ol'+p.OutlineLevel);
+          if(cb && cb.checked) {
+            ++importCount;
+            var r = p.Range;
+            badboy.script.References.add(r.ListFormat.ListString, document.settingsForm.referenceType.value ,r.Text);
+          }
+          p=null;
+        }
+        doc = null;
+        word.Quit();
+        word = null;
+        if(importCount > 0) {
+          alert("Finished!\r\n\r\nImported " + importCount + " Headings");
+          window.close();
+        }
+        else {
+          alert("No headings of the types specified were found!");
+        }
+      }
+
+      function init() {
+        document.settingsForm.fileName.focus();
+      }
+    </script>
+  </head>
+  <body onload="init();">
+    <h1>Import Microsoft Word&trade; Document Headings</h1>
+    <form name="settingsForm">
+      <fieldset>
+        <legend>1. Choose a File to Import</legend>
+        <div>
+        <input type="text" name="fileName" style="width: 320px"/>&nbsp;<button name="browseButton" onclick="this.form.fileName.value=window.external.plugin.BrowseFile('','','')">Browse...</button>
+        </div>
+      </fieldset>
+      <br/>
+      <br/>
+      <fieldset>
+        <legend>2. Choose Outline Levels to Include</legend>
+        <div>
+          <input type="checkbox" name="ol1" id="ol1" value="1"/>Level 1
+          <br/>
+          <input type="checkbox" name="ol2" id="ol2" value="2"/>Level 2
+          <br/>
+          <input type="checkbox" name="ol3" id="ol3" value="3"/>Level 3
+          <br/>
+          <input type="checkbox" name="ol4" id="ol4" value="4"/>Level 4
+          <br/>
+          <input type="checkbox" name="ol5" id="ol5" value="5"/>Level 5
+        </div>
+      </fieldset>
+      <br/>
+      <br/>
+      <fieldset>
+        <legend>3. Enter a Reference Type for the Imported Headings</legend>
+        <div>
+          <p>Examples:  "Requirement" or "Bug".</p>
+          Reference Type: <input type="text" name="referenceType" style="width: 200px;" value="Requirement"/>
+        </div>
+      </fieldset>
+      <br/>
+      <br/>
+      <fieldset>
+        <legend>4. Click to Import Headings</legend>
+        <div>
+        <button onclick="doImport();">Import &gt;&gt;</button>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

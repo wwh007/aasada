@@ -1,0 +1,57 @@
+LICENSE AGREEMENT
+You should carefully read the following terms and conditions before using Badboy. Your use of this software package indicates your acceptance of this license agreement. This is a legal agreement (this "Agreement") between you and the proprietor of this software. This Agreement is part of the software package.
+
+1. DEFINITIONS. 
+"The Software" means all versions of the Software known as "Badboy".
+
+"The Proprietor" is Badboy Software, Victoria, Australia. 
+
+To "distribute" means to copy, to make publicly available in any form, or to otherwise disseminate either the executable used to install The Software, or any of the files created by the Installation Program, in any medium to any third party.   
+
+"Non-Profit Entity" means any organization that meets ALL of the following criteria
+
+  a.  It was organized solely for non-profit purposes. 
+
+  b.  It is in fact operated solely for non-profit purposes. 
+
+  c.  It does not distribute or otherwise make available for the personal benefit of any of its owners or members any of its income.
+
+2. GRANT OF LICENSE. The proprietor hereby grants you a personal, non-exclusive, non-transferable license to use The Software, providing only that:
+
+  (a)  You are a private individual and will use The Software strictly for your own purposes and not on behalf of or for the benefit of any Corporation, other individual or private or public entity.
+  
+  OR
+  
+  (b)  You will use The Software strictly for Non-Profit purposes, on behalf of a Non-Profit Entity
+  
+  OR
+  
+  (c)  Are employed by a Corporation or other Legal Entity where The Software is installed on NOT MORE than FIVE Computers used by the Corporation.
+  
+  OR
+  
+  (d)  Have paid a license fee and have received a "Proof of Purchase" Serial Number and E-mail from The Proprietor.
+  
+  OR
+  
+  (e)  The Software is used strictly for educational purposes as part of a formal teaching program
+  
+3. REDISTRIBUTION Redistribution of The Software is prohibited except by the explicit permission of the Proprietor.  
+
+4. WARRANTY. This software and the accompanying files are provided "AS IS," without a warranty of any kind. 
+
+5. COPYRIGHT. Copyright is owned by The Proprietor and is protected by Australian copyright law and international treaty provisions. 
+
+6. TERMINATION The license will terminate immediately without notice from the proprietor if you fail to comply with any provision of this license. Upon termination, you must destroy all copies of the software and its components on any and all forms of media. 
+
+7. LIMITATION OF LIABILITY. IN NO EVENT WILL THE PROPRIETOR OR ITS SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, PROFIT, OR FOR DIRECT, SPECIAL, INDIRECT, CONSEQUENTIAL, INCIDENTAL OR PUNITIVE DAMAGES HOW EVER CAUSED AND REGARDLESS OF THEORY OF LIABILITY, ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF THE PROPRIETOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+
+8. AUDIT. 
+Upon request, Customer will certify in writing that it has paid any fees required by this Agreement, including, as evidence, the Proof of Purchase Serial Number provided by the Proprietor when The Software was originally purchased.
+
+9. GOVERNING LAW This agreement is made under, shall be governed by and construed in accordance with, the laws of the Commonwealth of Australia.
+
+
+10. THIS PRODUCT USES "LOG4CPP", AN OPEN SOURCE LOGGING COMPONENT PROVIDED UNDER "LESSER GENERAL PUBLIC LICENSE".  
+THE TERMS OF THIS LICENSE MAY BE FOUND IN THE FILE "LGPL.TXT" LOCATED IN THE INSTALLATION DIRECTORY OF THE PRODUCT. 
+CUSTOMER AGREES TO ABIDE BY THE LESSER GENERAL PUBLIC LICENSE WITH REGARD TO THIS COMPONENT.

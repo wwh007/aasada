@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="surfnstuff.css"/>
+    <script language="JavaScript" src="ss.js"></script>
+    <script language="JavaScript">
+      function setItem() {
+        var itemStr = getCookie('item');
+        if(itemStr != null) {
+          var item = parseInt(itemStr);
+          document.getElementById('itemName').innerHTML=items[item].name;
+        }
+      }
+    </script>
+  </head>
+  <body onload="setItem();">
+    <h2>Badboy's Surf'n Stuff Shop - Thankyou!</h2>
+    <br/>
+    <p>Thanks for buying from Badboy's Surf'n Stuff!</p>
+    <br/>
+    <p>Enjoy your <span id="itemName">&nbsp;</span>!</p>
+    <br/>
+    <a style="margin-left: 80px;" href="surfnstuff.html">return to Surf'n Stuff home page</a>
+  </body>
+</html>
+

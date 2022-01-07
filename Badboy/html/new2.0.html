@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>What's new in Badboy 2.0</title>
+</head>
+<body style="background-color: rgb(255, 255, 255); font-family: arial;">
+<basefont face="Arial">
+<h2>New Features and Enhancements
+in Version 2.0</h2>
+  
+<p>Badboy 2.0 is a major revision of Badboy to address many long standing goals
+and features.  Your <a href="http://www.badboy.com.au?p=feedback.php">feedback</a>
+has helped us understand the needs of Web Testers and Developers, and we have striven to provide
+a foundation for addressing these in Badboy 2.0.  The following major features are brand new:</p>
+  
+<ul>
+    <li><span class="featurepoint"><a href="#templates">Test Templates</a></span>
+          - Save a test as a template and reuse it over and over again</li>
+    <li><span class="featurepoint"><a href="#xmlformat">New XML Based File
+        Format</a></span> - Badboy now supports a new XML based file format for
+    both reading and writing</li>
+    <li><span class="featurepoint"><a href="#annotations">Script Tree Annotations</a></span>
+    - Problems in your script are now marked with Annotations, making them easy to find</li>
+    <li><span class="featurepoint"><a href="#dragtabs">Draggable Tabs</a></span>
+    - You can now drag Badboy's tabbed views around to arrange them how you like</li>
+    <li><span class="featurepoint"><a href="#multiselect">Multiple Select</a></span>
+    - You can now select, drag, drop, cut and paste groups of items in your script.</li>
+    <li><span class="featurepoint"><a href="#threaditems">Rich Thread Items</a></span>
+        - &nbsp;Thread Items&nbsp;now support&nbsp; a brand new JScript-capable MSHTML based browser engine for much more powerful load testing</li>
+
+    <li><span class="featurepoint"><a href="#ajax">Improved AJAX Support</a></span> 
+    - &nbsp;Badboy can now record and playback AJAX requests</li>
+
+    <li><span class="featurepoint"><a href="#unicode">Unicode
+        Support</a></span> - &nbsp;Badboy now has full Unicode support enabling
+    record and playback for internationalized web sites</li>
+
+    <li><span class="featurepoint"><a href="#plugins">Plugin Interface</a></span> 
+      - Badboy now supports Plugins which can add features to Badboy itself</li>
+    <li><span class="featurepoint"><a href="#external">External Tools</a></span> 
+      - Save items in your script as <i>External Items</i> which appear in your
+      Toolbox but are stored in their own files</li>
+    <li><span class="featurepoint"><a href="#references">References</a></span>
+    - Track references to bugs, features and requirements inside Badboy</li>
+</ul>
+  
+<p>Of course, these are just the big features. &nbsp;There are dozens of&nbsp;improvements and bug fixes to
+  make Badboy easier to use, more stable and better performing than ever
+  - the best way to discover them all is just to try it out!</p>
+<h3><a name="templates">Tests and Test Templates</a></h3>
+<p>Many users told us how as test scripts get larger maintenance and complexity become significant
+problems. Badboy now offers a powerful solution to help in the form of
+<i>Tests</i> and <i>Test Templates</i>.  The foundation of this change is a new <b>Test Item</b>
+that let's you more richly structure your scripts. Test Items in Badboy 2.0 have a special ability: they
+can inherit from <i>Templates</i>, another brand new feature in Badboy 2.0!
+<p>Test Templates allow you to reuse not just the content of your tests but
+their <i>structure</i>. Whenever you have a pattern that is common to many of your Tests you can
+save that pattern as a Template.  (A good example is the common requirement to log in and out 
+of your web site.)   All your tests that follow
+the same outline can then simply <i>extend</i> the Template and only override the portions needed
+to customize the Test for each particular scenario.   Because Templates are saved in their own
+file and <i>outside</i> of the scripts where they are used they can be shared across all 
+your tests!
+</p>
+<p align="center"><img alt="Test Templates" src="images/template.png"></p>
+<br/>
+<p></p>
+<h3><a name="external">External Tools</a></h3>
+<p>Badboy now lets you save any item in your script as an <i>External Tool</i>.  This means it is
+saved outside of your script in it's own file and can be shared between all of your Badboy scripts.
+Similar to the existing Custom Tools feature, External Tools appear in your
+Toolbox and can be dragged and dropped into your
+script.  Unlike Custom Tools, however, External Tools are each saved in their own file, 
+which can be either in a centralized Tools folder or simply placed in the same directory 
+as the other scripts that use the External Tool.</p>
+<p></p>
+<p align="center"><img alt="" src="images/external.png"></p>
+<h3><a name="unicode">Unicode Support</a></h3>
+<p>
+Badboy is now fully Unicode compatible, enabling recording and playback of web
+sites that were previously difficult or impossible to record correctly (such as sites
+containing Chinese, Hindi or Arabic characters).
+</p>
+<h3><a name="xmlformat">New XML Based File Format</a></h3>
+<p>Badboy can now save <i>and</i> load its files in a new XML based format.  The new format
+has many advantages including the ability to edit or utilize scripts in any editor or process that 
+can handle XML files.  The binary format is still supported too since it is smaller and faster 
+ and may be preferable for large scripts.  Have your cake and eat it too!</p>
+<p></p>
+
+<h3><a name="annotations">Script Tree Annotations</a></h3>
+<p>
+Badboy now marks items in the script that have errors and warnings so that you can easily see
+which parts of your script have problems.
+</p>
+<p align="center"><img alt="" src="images/annotations.png"></p>
+
+<h3><a name="dragtabs">Draggable Tabs</a></h3>
+<p>Badboy's tabbed views used to be locked in place, forcing you to switch between them and preventing you
+from viewing more than one at the same time.  In Badboy 2.0 you can click and drag the tabs to where ever
+you want them to be, enabling you to see multiple views at once.</p>
+
+<h3><a name="multiselect">Multiple Selection</a></h3>
+<p>You can now select multiple items in the Script when editing, allowing you
+to cut, paste, drag and drop groups of items instead of just single items as in previous versions.
+ 
+<h3><a name="threaditems">Rich Thread Items</a></h3>
+<p>In the past Badboy's threaded test engine could only fetch content and do simple 
+assertions on the downloaded pages.  Now Badboy can run background threads using a fully fledged
+MSHTML browser instance (the same rendering engine that 
+drives Internet Explorer &trade; and Badboy itself!). This allows
+the the tests to execute much more realistically, performing actions in Javascript (such as AJAX interactions)
+and manipulating the browser DOM.</p>
+<p></p>
+<p align="center"><img alt="Rich Threads" src="images/mshtmlthread.png"></p>
+<br/>
+<h3><a name="ajax">Improved AJAX Support and Full HTTP Stream Interception</a></h3>
+<p>
+Many new web applications are being built based on AJAX technology which use XMLHttpRequests and 
+modification of the browser DOM using Javascript instead of full browser page
+transitions.  Past versions of Badboy had 
+difficulty recording and playing back activity in these applications because it did 
+not intercept XMLHttpRequests and relied on page transitions to detect browser
+activity. Badboy 2.0 now has the ability to record AJAX requests when they are 
+invoked by Navigations including their response content, size and time on playback. 
+</p>
+<p></p>
+<p align="center"><img alt="" src="images/ajax.png"></p>
+<br/>
+<p>In fact, Badboy 2.0 intercepts <i>all</i> HTTP traffic from your browser session, allowing full capture
+of AJAX requests and other information previously unavailable such as HTTP Response codes and
+header information.  You can see a full HTTP trace in DOM View any time you are wondering what 
+your browser is doing!</p>
+<p align="center"><img alt="" src="images/requestlog.png"></p>
+
+<h3><a name="plugins">Plugin API</a></h3>
+<p>
+Badboy now has a powerful Plugin interface allowing you to write your own 
+features to extend and enhance Badboy!  Plugins are written in Javascript
+and have full access to an expanded API for controlling Badboy, accessing the Browser DOM,
+and even ability to create ActiveX controls <i>without</i> the need to change your browser 
+security settings.  Plugins can create HTML based views in Badboy's 
+user interface that behave just like Badboy's other views.</p>
+<p></p>
+<p align="center"><img alt="" src="images/plugin.png"></p>
+<br/>
+<h3><a name="references">References</a></h3>
+<p>
+Badboy now supports a feature to let you link 
+external references (issue tracking numbers, or requirements) to the Tests you create in Badboy.  By
+tracking references inside Badboy you can easily see which tracked features or 
+defects are impacted by Test failures.
+</p>
+<p>Badboy even includes a feature for importing headings from Microsoft Word &trade; 
+documents so that you can easily link those references to the Tests in your Badboy Script.   Using Badboy's
+plugin API it's even possible to make your own custom importer that interfaces with your requirements
+or defect tracking system.
+</p>
+<p align="center"><img alt="" src="images/references.png"></p>
+<br/>
+</body>
+</html>
