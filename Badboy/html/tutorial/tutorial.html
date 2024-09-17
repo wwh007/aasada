@@ -1,0 +1,229 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>Badboy - Start Page </title>
+  <link type="text/css" rel="stylesheet" href="tutorial.css"/>
+  <script language="JavaScript" src="ss.js"></script>
+  <script language="JavaScript">
+  </script>
+</head>
+<body onload="pages[0].show();">
+  <div id="content">
+    <h2 id="pageTitle">Welcome to the Badboy Tutorial!</h2>
+
+    <div id="desc">Over the course of this tutorial we'll learn how to use Badboy by creating tests
+    for a simple web site.  The frame below shows the main page of this site 
+    which we will be recording:</div>
+    <iframe name="testsite" src="surfnstuff.html">Your browser doesn't support frames!</iframe>
+  </div>
+
+  <img src="images/tlcnr.png" style="display: none;" id="tlcnr" class="cnrImg"/>
+  <img src="images/trcnr.png" style="display: none;" id="trcnr" class="cnrImg"/>
+  <img src="../images/spacer.gif" width="30" height="40" style="filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/blcnr.png', sizingMethod='scale'); display: none;" id="blcnr" class="cnrImg"/>
+  <img src="images/brcnr.png" style="display: none;" id="brcnr" class="cnrImg"/>
+
+  <div id="resbshadow">&nbsp;</div>
+  <div id="reshshadow">&nbsp;</div>
+  <div id="intro">
+    <h3>Recording a Request</h3>
+    <p id="intro-desc" class="desc">Over the course of this tutorial we'll learn how to use Badboy by creating tests
+    for a simple web site.  The frame below shows the main page of this site 
+    which we will be recording:</p>
+    <div id="intro">
+      <p>Let's start by recording the View Catalog link:</p>
+      <p class="do">Click on the "View our Catalog" link above</p>
+    </div>
+    <div id="intro-res" class="res" >
+      <p><span class="wdone">Well done!</span>  Your Script Tree should now have recorded 
+      a new Request for the link that you just clicked.  It should look something like the image below:  </p>
+
+      <p style="text-align: center;"><img src="images/catalogrequest.png"/></p>
+
+        Click the "next" button to continue the tutorial!
+      </div>
+    </div>
+  </div>
+
+  <div id="assertion" style="display: none;">
+    <p id="assertion-desc" class="desc">Since we are writing a test, we would like to verify that our
+    page displayed correctly.  To do that, Badboy uses <i>Assertions</i>.  Let's
+    add an Assertion to check that the words "Choose from our great line"
+    appear on this page.</p>
+
+    <h3>Adding an Assertion</h3>
+    <p class="do">
+      <ul class="dolist">
+        <li>With the mouse, select the words "Choose from our great line" on the test page above</li>
+        <li>Press the Ctrl, Alt and A keys all together.</li>
+        <li><a href="javascript:surfnClick('assertionadded');">Click here when you have added your Assertion</a></li>
+      </ul>
+    </p>
+    
+    <div id="assertion-res" class="res"> 
+      <p>You should now see a new Assertion in your script.  If you expand it,
+      it will have a Content Check underneath it.  It should look something like 
+      this:</p>
+      <p class="egimg"><img src="images/catalogassertion.png"/></p>
+      <p>If the words aren't found when the Assertion plays, it
+      will warn you.  Assertions can do a lot of other useful things too, such as
+      capture screen shots, or abort your script when failures occur.</p>
+      <p>Click the "next" button to continue the tutorial!</p>
+    </div>
+  </div>
+
+  <div id="paramvar">
+    <p id="paramvar-desc" class="desc">Next we will learn about Parameters and Variables.
+    <div>
+      <h3>Record a Request with a Parameter</h3>
+      <p class="do">Click on the "Surf'n Flippers" link in the Catalog page above.</p>
+      <br/>
+      <br/>
+    </div>
+    <div id="paramvar-res" class="res">
+      <p>You should now have another Request recorded in your Script Tree, underneath
+      your Assertion.  Expand the Request - it should look like
+      the picture below.  <i>Note the the yellow question mark at the bottom.</i></p>
+      <p class="egimg"><img src="images\reqparam.png"/></p>
+      <p>Click the "next" button to continue the tutorial!</p>
+    </div>
+  </div>
+
+  <div id="variable">
+    <p id="variable-desc" class="desc">The yellow question mark is called a
+    "Parameter". It indicates to the website which item you selected on the
+    previous page. By changing the Parameter, we can select a different item.</p>
+    <div class="instr">
+      <h3>Create a Variable for a Parameter</h3>
+      <p>We'd like to test all the items, so we'd like to try all different values
+      for this parameter.  In Badboy we can do this with a "Variable".
+      <i>In the next step, the Variable Properties dialog will show.  When it does,
+        move it over so you can still read the steps and keep following along.</i>
+      </p> 
+      <p class="do">
+        <ul class="dolist">
+          <li>In the Script Tree, Right Click on the yellow Parameter and choose "Add Linked Variable".</li>
+          <li>The Variable Properties dialog will show</li>
+          <li>Enter '0' in the Current Value field, and click the Add button to add it as a value</li>
+          <li>Repeat the previous step for '1','2' and '3' so that 0,1,2 and 3 all appear in the Value List</li>
+          <li>Click OK to close the dialog</li>
+          <li><a href="javascript:result();">Click here when you have finished</a></li>
+        </ul>
+      </p>
+    </div>
+    <div id="variable-res" class="res">
+      <p>Have a look at the Variables tab in the Summary View (it's probably in the 
+      lower left hand corner of your Badboy window). You should see a new
+      variable called "item" there as shown in the picture below:</p>
+      <p class="egimg"><img src="images\variablestab.png"/></p>
+      <p>Notice also that your parameter has changed.  Instead of the value '1',
+      it now has a reference to the <i>item</i> variable:</p>
+      <p class="egimg"><img src="images\linkedparam.png"/></p>
+
+      Click the "next" button to continue the tutorial!
+    </div>
+  </div>
+
+  <div id="navigation">
+    <div id="navigation-desc" class="desc">
+    <p>Next we are going to learn about Badboy's two different record modes,
+    called <i>Request Mode</i> and <i>Navigation Mode</i>.
+    Our first recordings used Request Mode.  For the next item we will try
+    Navigation mode. </p>
+    </div>
+    <div>
+      <h3>Record a Navigation</h3>
+      <br/>
+        <p class="do">
+          <ul class="dolist">
+            <li>Click the 'Gift Wrapped' checkbox so that it is checked</li>
+            <li>Hold down Control and Alt, and at the same time click the Purchase button.</li>
+          </ul>
+        </p>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+    </div>
+    <div id="navigation-res" class="res">
+        <p><span  class="wdone">Well done!</span><br/>
+          You should now have two new items recorded in your script.  Expand
+          the Form Populator.  It should look a bit like below:
+          </p>
+        <p class="egimg"><img src="images\navigation.png"/></p>
+        <p>In Navigation mode Badboy records the <i>name</i> or <i>text</i> of links
+        and buttons instead of the URLs that they navigate to.  Since you clicked on 
+        the 'Purchase' button, Badboy recorded a symbol of a button with the
+        word 'Purchase'.</p>
+        <p>Because you checked the 'Gift Wrap' option it also recorded a Form Populator
+           to check the box on playback.</p>
+
+        Click the "next" button to continue the tutorial!
+    </div>
+  </div>
+
+  <div id="loops">
+    <div id="loops-desc" class="desc">One of Badboy's powerful features is loops.
+      We would like to make our script attempt to buy every item in the 
+      Surf'n Stuff catalog. To do this, we'll make a loop that runs once for each item.</div>
+    <div>
+      <p class="do">
+        <ol  style="padding-left: 10px" class="dolist">
+          <li>Right click on the Step (this is the <img src="images/redstep.png"/> symbol at the top of your script)</li>
+          <li>Select "Properties" - the properties dialog will open</li>
+          <li>In the "Repeat" section of the properties, select "For each value of variable"</li>
+          <li>Click OK to close the Step properties dialog</li>
+          <li><a href="javascript:result();">Click here when you have finished</a></li>
+        </ol>
+      </p>
+    </div>
+    <div id="loops-res" class="res">
+      <p>Your Step should now look like this in the Script Tree</p>
+      <p class="egimg"><img src="images\step.png"/></p>
+      Click the "next" button to continue the tutorial!
+    </div>
+  </div>
+
+  <div id="play">
+    <div id="play-desc" class="desc">
+      <b>Congratulations!</b>&nbsp;&nbsp;You've now finished creating the test script for the Surf'n Stuff
+      web site.   Now we have just one more step to do - let's play the script!
+    </div>
+    <div>
+      <h3>Playing the Script</h3>
+      <p class="do">
+        <ol  style="padding-left: 10px" class="dolist">
+          <li>Right-click on the Step and select "Play"</li>
+          <li>You should see the script play through and buy each item
+              from the Surf'n Stuff Catalog!</li>
+          <li><a href="javascript:result();">Click here when the script finishes playing</a></li>
+        </ol>
+      </p>
+   </div>
+    <div id="play-res" class="res">
+      <p><span class="wdone">Well done!</span></p>
+      <p>  You've completed the Badboy tutorial.</p>
+      <p>Please tell us any feedback about this tutorial by sending to 
+      our <a target="feedback" href="http://www.badboy.com.au/?p=feedback">Feedback Page</a>!</p>
+      <p>There's one more thing to try, however.  Click on the
+      "View" menu at the top of the Badboy window and select "Report" to see
+      the report showing how your script played.</p>
+    </div>
+  </div>
+
+  <div id="">
+    <div id="-desc" class="desc"></div>
+    <div>
+    </div>
+    <div id="-res" class="res">
+    </div>
+  </div>
+
+  </div>
+  <div width="100%" id="bottomdiv" style="text-align: right;">
+    <!--<a href="javascript:previousPage()">&lt;&lt;</a>
+    &nbsp;
+    -->
+    <a href="javascript:nextPage()"><img id="nextImg" style="display: none;" border="0" src="images/next.png"/></a></div>
+</body>
+</html>

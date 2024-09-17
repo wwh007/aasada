@@ -1,0 +1,2098 @@
+
+==============================================
+Release Notes for Badboy Version 2.2.5
+==============================================
+
+
+CHANGES IN BADBOY 2.2.1
+
+    #1523: Support for Labels as References for Navigations as
+           "Visible Text"
+    
+    #1518: User Agent Changes Not Reflected in
+           navigator.userAgent Javascript Property
+    
+    #1522: Support to Change User Agent using JavaScript /
+           OLE / API
+    
+    #1521: Ability to Resolve Navigation Elements from to
+           other Elements by Relative Path (incomplete)
+    
+    #1520: Variables Not Resolved inside JScript Items
+    
+    #1519: XmlHttpRequests may be Associated with Incorrect
+           Response Content when the Same XHR Sent Multiple Times
+    
+    #-------: Display version label instead of internal
+              version number in update notification
+    
+    #--------: Cookies not deleted on sites when cookie value
+           contains '*' or domain is set to end with '/'
+    
+    #1515: Cross Domain XMLHttpRequest Does Not Send Cookies
+    
+    #1516: Sites with Very Slow Loading Pages May Proceed in
+           Script before Page Fully Loaded
+    
+    #1517: Possible Crash when non-HTML frames loaded in
+           browser
+    
+    #-------: Crash when closing popup window before loaded
+           when recording
+    
+    #-------: some links incorrectly detected as within-page
+           navigations thus not waiting for page load on playback
+
+    #1526: CookieKiller Support to Delete HTML5 LocalStorage
+    
+    #------: Failure when parsing files in system using Shift-JIS codepage
+    
+    #1525: Sporadic Crash on Specific Versions of IE / Windows
+
+    -----: Fix potential crash when "stop on error" occurs 
+
+    -----: Playback may stop incorrectly when items fail for unexpected reasons
+
+    -----: Fix random failures and behavior when IE cookie index out of sync 
+             with file system (appears to be behavior of recent updates)
+
+    -----: Fix potential crash / undefined behavior when page / frame 
+           with completely blank URL loaded 
+
+    -----: Fix tutorial control elements incorrectly recorded
+
+    
+CHANGES IN BADBOY 2.2
+    
+    #------: Fix script tree sometimes sized too small (even
+           to nothing) on startup
+    
+    #--------: Disable use of browser based events because of
+           crashes on IE10/IE11
+    
+    #--------: Support for Saving Response Times to CSV via
+               Save Item (including Append Mode support)
+    
+    #------ : Ensure all message box handlers are removed
+           when playback is forcibly stopped
+    
+    #1514: Recording Navigations Fails after Saving Defaults
+           for Navigation Item in Toolbox
+    
+    #1513: Some Types AJAX Requests Failing
+    
+    #1511: Version Check on Startup with Preference to Disable
+    
+    #1510: Plugins Failing to Initialize on Win7 / IE9
+    
+    #1487: In Rare Cases Navigation Causes "Incorrect Function"
+           Error in Javascript Handing Click Events - Regression
+           causing plugins to fail in loading on some versions of IE
+    
+    #1509: Crash when Recording Click on Element that is
+           Removed from DOM by Click
+
+IMPORTANT: Badboy 2.2 changes the default recording mode
+           to Navigation Mode. This change can be reverted
+           to old behavior in Preferences => Recording!
+    
+    #1508: Support for Date Functions In Variable Syntax
+    
+    #1507: Append Option not Working with Save Item and XSL
+           Style Sheet
+    
+    #1506: Buttons using Input with Image Type Not Recording
+    
+    #1505: Show More Information about IFRAMEs in DOM View
+    
+    #1249: Option to Select which Cookies are Killed / Not
+           Killed by Cookie Killer
+    
+    #1504: Abort Test Action after Timeout causes Same Test
+           Repeated if Only One Test in Script
+    
+    #1502: Navigations that create only Ephemeral Frames should
+           be marked as Passive
+    
+    #1503: Screen Shots failing on Windows 8
+    
+    #1501: Crash When Closing DOM View on Windows 8
+    
+    #1500: Silent Mode Does not Suppress Message Boxes when
+           Script Not Playing
+    
+    #---------: Fix request interception quiescence not
+           correctly reset when new requests intercepted
+    
+    #--------: Regression causing clicking on some autocomplete
+           dropdowns to fail (setting src element for simulated
+           events)
+    
+    #1497: Office365 Login Hangs Forever While Recording
+    
+    #--------: Keyboard events simulated by form populator
+           have incorrect key code
+    
+    #1495: Install as Unprivileged User on XP does not create
+           Start Menu Entry
+    
+    #--------: Fixed Badboy getting Sent to the Background
+           when Some Navigations Execute
+    
+    #1494: Popup Window Containing PDF Doesn't Close when
+           Close Box Clicked
+    
+    #1493: Timeouts do not Show an Annotation in Script Tree
+    
+    #1492: Color Check Fails when Run in MSHTML Thread
+    
+    #1487: In Rare Cases Navigation Causes "Incorrect Function"
+           Error in Javascript Handling Click Events
+    
+    #1488: Element Information Popup (from F4) Appears in Top
+           Left of Screen Instead of Near Element (Win8)
+    
+    #1489: Page that Navigates to a Hash / Named Location in
+           Background Causes Form Populators to Fail to Record
+    
+    #1486: Incorrect clientX, clientY coordinates in Simulated
+           Mouse Events
+    
+    #1484: Javascript Confirm Records OK Response even if
+           Cancel Selected
+    
+    #1483: Javascript Prompt not Recorded / Handled
+    
+    #1479: Copy / Paste Download Handler to Navigation Ends
+           up as Sibling rather than Child
+    
+    #1479: Copy / Paste Download Handler to Navigation Ends
+           up as Sibling rather than Child
+    
+    #1482: Web Pages can "Hang" when XMLHttpRequest
+           Interception Enabled (Eg. Facebook login / logout)
+    
+    #1480: Download Handler not Working inside Thread Item
+    
+    #1481: Interface Freezing / Slow during Heavy Load Tests
+    
+    #1478: Navigation Within a Page Should be Recorded as
+           Passive
+    
+    #1472: Automatically Increase Quiescence Time on Previous
+           Recorded Item when Page Pauses for Long Time in Loading
+    
+    #1477: Failing to Record Clicks on Some Elements with No
+           Attributes in Navigation Mode
+    
+    #1017: MessageBox Items recorded after Navigations in
+           Common Cases
+    
+    #1476: Pages containing Cufon Fonts Experience Javascript
+           Errors and Record Incorrectly
+    
+    #1475: Shrinking Script Tree View to Zero Width with the
+           Mouse Makes it Impossible to Show it Again
+    
+    #1463: In Rare Cases Form Populator not Capturing All /
+           Any Elements - Fixed same problem occuring in another place
+    
+    #------ : Some pages not waiting long enough on playback
+    
+    #1473: Incorrect Index Recorded for Navigation when
+           Matching Element Removed by OnMouseDown Handler
+    
+    #1474: Clear Persistent Cookie State for Sites Recorded
+           after Starting New Script
+    
+    #1471: Shade the browser window during phases of recording
+           when user should not interact with it
+    
+    #1470: Set Script Name as Default Value of Script itemName
+           Property
+    
+    #1469: When Sequential Compatible Form Populators are
+           Recorded Badboy they should be Merged
+    
+    #1466: Hidden Iframes with Javascript URLs cause Badboy
+           to Report Request as Failed
+    
+    #1465: Possible Crash when Javascript Error Occurs
+           (Very Rare)
+    
+    #1464: Playback of Navigations on jQuery Autocomplete
+           Not Working
+    
+    #1461: Form Populator not Recorded when Form Submit Opens
+           New Window
+    
+    #1460: Crash when Spider Item Closes Popup Windows
+    
+    #1459: Option for Default Recording Mode / Navigation Mode
+           as Default
+    
+    #1458: Some Elements Not Receiving DOM events for
+           Navigations on Playback
+    
+    #1457: Internal Error 0x800A083E - Navigations not Working
+           on Some Elements
+    
+    #1455: Zoom Level Not Controllable (Ctrl+, Ctrl-)
+
+CHANGES IN BADBOY 2.1.3
+
+    #1454: Option to Locate / Highlight Element for Form Value
+    
+    #1453: Response Not Recording Properly for Navigations
+           that Close Popup Windows
+
+    ==== Beta 3 ===
+    
+    #1454: Option to Locate / Highlight Element for Form Value
+    
+    #1453: Response Not Recording Properly for Navigations
+           that Close Popup Windows
+
+    ==== Beta 2 ===
+    
+    #1450: Unnecessary Form Populators Recorded
+    
+    #1451: Don't Record Passive Navigations on Dropdown Boxes
+    
+    #1452: Dropdown Boxes Recorded as Having OnChange Handler
+           when they Don't
+    
+    #1446: Form Populators Recorded for Forms that Haven't
+           Changed in Navigation Mode
+
+    ==== Beta 1 ===
+    
+    #1447: Form Values Populated with Send DOM Events Enabled
+           don't Always Send Events in IE9
+    
+    #1448: Badboy May Record Navigation on Incorrect Element
+           when Elements are Dynamically Added or Removed During Click
+    
+    #1445: Better Recording of Autocomplete Text Fields
+    
+    #1446: Form Populators Recorded for Forms that Haven't
+           Changed in Navigation Mode
+    
+    #1444: Passive Navigations should Set Focus to Element
+           when Clicking it
+    
+    #1441: Navigations using Visible Text References may Break
+           Javascript on Web Pages in Rare Cases
+    
+    #1440: Color Check Scrolls to Top of Page
+    
+    #1435: Support for Mock AutoCompleteSaveForm Implementation
+           (IE compatibility)
+    
+    #1434: AJAX POST requests encoded with non-default charsets
+           are recorded incorrectly
+    
+CHANGES IN BADBOY 2.1.2
+    
+    #1428: Sometimes Badboy is not the Top Most Window when
+           Started from Win7 Quick Launch
+
+    #1419: Navigation and Form Populator Sometimes Recorded
+           Twice for a Single Quick if Page Responds Slowly
+    
+    #1420: Javascript 'badboy' Object Not Always Accessible
+           when Expected
+    
+    #1421: Form Populator - Support for using Regular
+           Expressions to Match Name of Form Fields Populated
+    
+    #1422: IE9 - Assertions and Variable Setters Not Always
+           Matching Content as Expected when Runtime Body Content Used
+    
+    #1423: Support for Automatically Masking Recorded Form
+           Values with Regex when they contain Generated Ids
+    
+    #1424: Improved Easy Assertion Generation - Prevent Over
+           Aggressive Trimming of Generated Content
+    
+    #1425: Automatic Variable Setter Tool not working well
+           in IE9
+    
+    #1426: Screen Shots Should Not be Recorded by Screen Shot
+           Item when Response Recording Disabled
+    
+    #1427: Variable Setter Regex Helper Does Not Observe
+           Runtime vs Original Source Setting
+    
+    #1418: Crash when dragging and dropping Item just
+           above Thread Item 
+    
+    #1413: Incorrect Element Clicked by Navigation when
+           Identical Elements exist in Child Frame and Parent Frame
+    
+    #1405: Crash if Navigation Javascript Reference Returns
+           String instead of Element
+    
+    #1398: Crash while Recording after Clicking in Field with
+           Duplicate Name
+    
+    #1369: BadBoy 2.1.1.10 - GUI artifact seen
+    
+    #1397: Responses displaying only direct size not top size
+           and total size
+    
+    #1394: Variable Property Window uses Unaliased Font
+    
+    #1396: Timeout Continuation "Repeat the Containing
+           Step" only retries the step once
+    
+    #1395: 'Variable Properties' window shows variable
+           has TWO current values.
+    
+    #1393: Playback Hangs at Passive Navigation after Cascading
+           Timer
+    
+    #1387: Invalid Reference in Navigation causes Bad Pointer
+           Warning and Playback Stalls
+    
+CHANGES IN BADBOY 2.1.2_beta_2
+
+    #1380: DownloadHandler Fails to Open File when Repeated
+           Twice without Intervening Browser Activity
+    
+    #1370: Onbeforeunload Event not Invoked when Popup Window
+           Closed by Script
+    
+    #1329: Timestamps at Millisecond Resolution in Trace Output
+    
+    #1367: Crashes when 'This Script' is selected from in
+           Aggregate Item
+    
+    #1331: Form Populator Should Not Capture <INPUT
+           type="reset">
+    
+    #1368: Badboy crash when reordering (merging) assertions
+    
+    #1359: Window Control does not put focus into Browser
+           Main Window
+    
+    #1366: Crash when DownloadHandler Executes Twice with no
+           other Browser Activity in between
+    
+    #1361: Potential Crash when Background Keys Item Sends
+           Keys Asynchronously
+    
+    #1337: Option "Ignore hidden fields" for Action Type
+           "Form Populator" has no effect
+    
+    #1339: Keys Item Action Type spams text (amongst other
+           things) when multiple lines are involved
+    
+    #1350: Save Item Include Response Content Should be Enabled
+           when Saving as Script
+    
+    #1332: Badboy crashes if the template referred by the
+           script does not exist when Opening using new Badboy
+           Instance
+    
+    #1347: Step Iteration Count Integer Overflow in Properties 
+           Window
+    
+    #1339: Keys Item Action Type sends large number
+           of Incorrect Keystrokes when multiple lines are involved
+
+    #1350: Save Item Include Response Content Should be Enabled
+           when Saving as Script
+    
+    #1335: Cannot Remove Documentation / Comment Completely
+    
+    #1307: Support for Full Execution Tracing (added
+           enable/disable via preferences)
+    
+    #1345: License Key Entered with Spaces at Beginning or
+           End Treated as Invalid
+    
+    #1342: Response times sometimes include quiescence time
+           making them not relfect true response time
+    
+    #1338: Response Timestamps may experience Time Zone 
+           shift when script saved and reopened
+    
+    #1322: Crash on Playback for Timeout with Retry
+    
+    #1307: Support for Full Execution Tracing (Internal
+           enhancement).  Disabled by default, enable
+           in Preferences
+
+
+CHANGES IN BADBOY 2.1.2_beta_1
+
+    #1303: Badboy Renders Pages in IE8 mode instead of IE9 Mode
+    
+    #1302: Include the Count of Number of Times Played in
+           Request Details in HTML Report
+    
+    #1301: Improvements to Documentation Export
+    
+    #1300: Warnings Cannot be Filtered using Error Filter in
+           Playing Properties
+    
+    #1282: HTTP Errors are not Filtered by Ignore Errors Option
+           on Playable Items (again)
+    
+
+CHANGES IN BADBOY 2.1.1
+
+    #1293: Thread Items do not support badboy.plugin Object
+    
+    #1255: Navigation Needs Option to "Complete" the Same
+           as Request
+    
+    #1256: Tab in JScript Check Properties is Labelled
+           "Response Check"
+
+    #1286: Variable with value 3377432334 results in negative
+           number when incremented
+    
+    #1291: Spider Items May Stall in Some Cases where Pages
+           Experience Errors during Playback
+    
+    #1288: Multipart Forms / File Uploads Sometimes Do Not
+           Record Last Field in Form
+    
+    #1289: Better Support for Recording File Upload Fields
+           in IE8
+    
+    #1290: Support for Extracting Protocol / Scheme as Variable
+    
+    #1282: HTTP Errors are not Filtered by Ignore Errors Option
+           on Playable Items
+    
+    #1289: Better Support for Recording File Upload Fields
+           in IE8
+    
+    #1288: Multipart Forms / File Uploads Sometimes Do Not
+           Record Last Field in Form
+    
+    #1287: Ability to Set Single Item to be Played for when
+           Running GUI from the Command Line
+    
+    #1283: JScript Checks Create 'f' Javascript Variable in
+           Global Scope which may Conflict with Existing Values
+    
+    #1281: Possible Crash while Recording in Navigation Mode
+
+    #1275: Recorded Navigations do not Inherit Defaults from Properties Saved in Toolbox
+    
+    #1273: Badboy JMeter Export Does Not Load in JMeter 2.4
+    
+    #1274: Exporting as JMeter from .bx Format Defaults to
+           Incorrect Extension in File Name
+
+CHANGES IN BADBOY 2.1
+
+    #1272: Screen Shots not Reported when Thread Items use
+           MSHTML Engine
+    
+    #1263: "This program might not have installed correctly"
+           Displayed After ReInstalling Badboy (Again)
+
+    #1225: Regex Helper in Variable Check Fails and shows
+           Chinese Characters
+    
+    #1270: DOM View Not Reloaded when Page Reloaded
+    
+    #1219: Ability to Flag Screen Shots for Manual Review and
+           Support for Review Report - show documentation page by
+           default in properties, custom icon and tool in toolbox
+    
+    #1271: Mouse Coordinates and RGB Color Value Sometimes
+           Clipped in DOM View
+    
+    #1269: Remove Bbrand Functionality
+    
+    #1268: Toolbar Does not Support Themes and Paints
+           Incorrectly Sometimes
+    
+    #1266: Crash when Running Threads (Rare)
+    
+    #1267: When Opening Tools / Variables / Etc Should Scroll
+           Script Tree so Current Step is Still in View
+    
+    #1264: Window Tool Ability to Focus Windows as Well as
+           Close Them
+
+
+CHANGES IN BADBOY 2.1_beta_8
+
+    #1263: "This program might not have installed correctly"
+           Displayed After ReInstalling Badboy
+    
+    #1260: Button in DOM View to Add JScript Item / Check from
+           Entered Text
+    
+    #1261: Unnecessary Scroll Bars on Script Editor in DOM View
+    
+    #1262: Properties for JScript Item and Other Items has
+           Buttons Overlapping Window Border (Win7/Vista)
+    
+    #1254: Summary View Sometimes displays "Loading..." at
+           Startup
+    
+    #1247: Script Level Documentation not Loaded
+    
+    #1245: External Tools do not Appear in Toolbox when File
+           Opened from Windows 7 Jump List
+    
+    #1246: Files Slow to Open When Opened from Windows 7
+           Jump List
+    
+    #1248: Variable Setter with Regex and Runtime Body Content
+           Ignores Subexpression
+    
+    #1244: Ctrl+Shift+F5 Shortcut key to Re-Play Last /
+           Current Step
+    
+    #1239: Support for Export of Variable Setters to JMeter
+    
+    #1241: Excessive Blinking when Resizing and Show Window
+           Contents While Dragging Enabled
+    
+    #1242: Ability for Keys Item to Raise and Focus Window
+           of Interest
+    
+    #1243: Option for Navigation to Fail if Element to be
+           Clicked is Invisible
+    
+CHANGES IN BADBOY 2.1_beta_7
+
+    #1229: Navigation Mode Records Checkboxes Badly
+    
+    #1230: Random Sporadic Crashes after Closing DOM View
+    
+    #----:  Added documentation for some script item properties
+           (Message Box Item)
+    
+    #1219: REGRESSION - Some old scripts not loading with new Badboy version
+    
+    #----:  Added help for References
+
+    #1231: Navigation does not set Button Type in Generated Events 
+    
+
+CHANGES IN BADBOY 2.1_beta_6
+    
+    #1213: Hot Key for Adding New Step  (Ctrl+Shift+S)
+    
+    #1214: Export of Script Outline / Documentation as HTML
+           (File => Save As => HTML Documentation)
+    
+    #----: Overriding Step in Template Should Show Step 
+           Contents
+
+    #1215: Overriding Step in Template does not Undo /
+           Redo Properly
+    
+    #1216: Populate Step with Template Contents when Overriding
+    
+    #1217: Crash when Changing Highlighed Element with DOM
+           View Open
+    
+    #1218: Ability to Set Name and Documentation for Whole
+           Script
+    
+    #1219: Ability to Flag Screen Shots for Manual Review and
+           Support for Review Report
+    
+    #1220: Download Handler Does not Substitute Variable
+           References in Location
+    
+    #1223: Support for Import of References from Open Office
+    
+    #1221: Ability to Create Bullet Lists in Documentation
+           (Ctrl+T)
+    
+    #1222: Display Checkmark in References List for References
+           that are Mapped to Tests
+    
+    #1224: Reference Mappings to Tests not Saved
+    
+    #1211: Badboy Fails to Start on some Configurations of
+           Windows XP
+    
+    #1208: Script Hanging Forever on Assertion Configured with
+           Wait Time
+    
+    #1207: Crash if Launching Non-Existent Custom Reference
+           Provider
+
+    #----:  Added help for References
+
+CHANGES IN BADBOY 2.1_beta_5
+
+    #----:  Better help for Regular Expression, Other Misc
+           Updates
+    
+    #----:  Crash on File Upload (internal regression)
+    
+    #1197: Support for Retrying Items Upon Failure
+    
+    #1198: Handling of Downloads
+    
+    #1203: Screen Shot Fails on Windows 7
+    
+    #1199: HTML Report Fails to Display if Illegal XML Chars
+           in Item Documentation
+    
+    #1197: Support for Retrying Items Upon Failure
+    
+    #1196: Crash when or after Clearing Responses
+           (Ctrl+Shift+K)
+    
+    #----: OLE getResponse() Call May return Response Other
+           than Most Recent
+    
+    #1190: Form Part Item Dropped into Request is Ignored
+           on Playback
+
+    #1195: Failure to Record Multipart Form Submission
+           Correctly if Followed by Redirect to same URL
+    
+    #1194: Auto-Adjustment of Quiescence Time for Improved
+           Recording of Sites with Long Pauses in Page Display
+    
+    #1193: Possible Crash when Log View Opened but Logging
+           not Deconfigured / Unconfigured / Unavailable
+    
+    #1192: Crash when Recording Some Pages with Malformed Links
+           (<A> tags)
+    
+CHANGES IN BADBOY 2.1_beta_4
+
+    #1189: Display of Variables for Assertion Failures in
+           HTML Report
+    
+    #----: Display of Path to Assertion for Assertion Failures
+           in HTML Report
+    
+    #1187: Font in URL / Location Bar is Ugly in Vista /
+           Windows 7
+    
+    #----:  Potential Crash on Startup (Rare)
+    
+    #1186: Clear Responses Leaves Behind Empty Responses Items
+           in Script
+    
+    #1185: Ability to Customize Length of Recent File List in
+           File Menu in Preferences
+    
+    #1183: Possible Crash when Running Threads
+    
+    #1184: Script Tree Very Slow after Running Thread Item
+    
+    #1182: Shift-Enter Shortcut Key to Set Play Position to
+           Current Item in Script Tree
+    
+    #1181: Tabs in Various Views Sometimes Drag by Accident
+           if just Clicked on
+    
+    #1180: Possible Crash / Unknown Internal Error if
+           Non-Existent Target Window Specified
+    
+    #1179: Form Populators should send OnClick Events to
+           Checkbox and Radio Fields when 'Send DOM Events' Enabled
+    
+    #1178: File Uploads not Recording / Playing Back Correctly
+           in IE8
+    
+    #1177: Stall on Playback when Page adds and then Removes
+           Elements Dynamically that load Content
+    
+    #1175: Javascript Error Reported / Incorrect Element
+           Clicked when Navigation using Javascript Reference Fails
+           to Find Element
+    
+    #1174: Incorrect Form Populator Recorded when Multiple
+           Forms with Same Name or Form Elements without Form on Page
+    
+    #1157: Display Item Names in Script Tree
+    
+    #1172: Error Message Displayed when Switching Away from
+           Browser with non-HTML Content if DOM View Open
+    
+    #1171: Cascading Mouse Click Item Clicks even if Script
+           Playback Stopped
+    
+    #1170: Very Occasional Crash during Playback on Pages with
+           Huge Number of Links
+    
+    #----: Fixed Potential Crash when non-HTML Content in
+           Browser
+    
+    #1165: Progress reported from OLE progress method Goes
+           Backwards when Steps Loop
+    
+    #1164: Improve Log Views with Searching and Filtering
+    
+    #----: Add hot keys Ctrl+Shift+R to open Request Log and
+           Ctrl+Shift+L to open Badboy Log
+    
+
+CHANGES IN BADBOY 2.1_beta_3
+    
+    #----: Better Color Coding in Report Summary with 
+           Clickable Headings to Jump to Errors
+
+    #1163: Tool Box has No Icons if Badboy Started with Toolbox
+           as Floating Window
+    
+    #1162: Schedule Button on Toolbar and Schedule Item in
+           Script Fail under Windows Vista
+    
+    #1161: Remember DOM Filter between Closing and Re-Opening
+           DOM View
+    
+    #----: Show On-Screen Element Info when Element Selected
+           in DOM View Tree
+    
+    #1160: Message Box Items Still Dismiss Messages even if
+           Playback Stopped
+    
+    #1159: Shift+F2 Hotkey to set Parent of Selected Item in
+           Script Tree as Recording Step
+
+    #1158: Tool Window Should Toggle Away if Ctrl+T Pressed
+           Multiple Times
+    
+    #1155: Crash when Running Threads using Raw Browser Engine
+    
+    #1154: Support for Extracting Content from Runtime Body
+           Content using Variable Setter
+    
+    #1153: Ability to Set Filter on Items to be Played via
+           OLE / JScript
+    
+    #1152: Form Populator Fails with Unknown Internal Error
+    
+    #0904: Assertion Failures inside Templates should appear
+           in Report
+    
+    #----: Problems expanding / unexpanding items in HTML
+           report
+    
+    #----: Added Expand-All link in HTML Report
+    
+    #0885: Ability to use CSV Files as Data Source Directly
+    
+    #----:  Fixed Possible Crash when Cursor Used to Select
+           Items in Tree (affects 2.1 versions only)
+    
+    #----: Fixed Potential Crash when Server Returns Response
+           with No Headers (affects 2.1 versions only)
+    
+    #----: Added 'stoppedCount' property to JScript / OLE
+           properties available on Thread Item
+    
+    #----:  Added whitespace CSS property to element CSS
+           display
+    
+    #1151: Hang on Playback In Rare Situations due to IE not
+           Reporting Page Load Correctly
+    
+    #1150: Invalid File Uploads Exported to JMeter for Blank
+           File Upload Fields
+    
+    #1024: Custom User Agent Not Used in Load Tests
+    
+    #1145: Infinite Resize Loop / Jitter / Crash When Toolbox
+           Resized
+    
+    #1149: Repetition Count not Available as Step Property in
+           JScript / OLE API
+    
+    #1140: Very Occasional Crash During Playback
+
+CHANGES IN BADBOY 2.1_beta_2
+    
+    #1140: Very Occasional Crash During Playback (affects 2.1 Beta 1 only)
+    
+    #1137: Ability to Clear Form Part Item Contents when Data
+           is Binary
+    
+    #1139: Load Javascript from File in JScript Item
+    
+    #1138: Keys Item in Background Mode Still Sends Keys if
+           Playback Stopped
+    
+    #1136: Data Truncated on Playback of Multipart Forms
+           Containing Binary Data (File Uploads)
+    
+    #1135: Ability to Check for Text in Native Windows
+           (Captions, Buttons, Text Fields Etc)
+    
+    #1134: Crash if Threads use MSHTML Browser Engine to Browse
+           non-Browser Content eg: PDF
+    
+    #----: Support for Special 'self' value for External
+           Results Listener to cause Listener to Start
+
+CHANGES IN BADBOY 2.1_beta_1
+    
+    #1131: Switching Elements in DOM View Sometimes Leaves
+           Old Element Highlighted
+    
+    #1130: Badboy Renders in IE7 Mode when IE8 Installed
+
+    #1129: Javascript Errors not Matched by Ignore Errors
+           Filter
+    
+    #1120 Support for Form Population to Simulate JavaScript Events 
+     
+    #----:  Removed Annoying Beep when Opening Script Tree
+           Items via Alt-Enter
+    
+    #----:  Removed obsolete, redundant, confusing Post data
+           envelope displayed in requests in Script Tree
+
+    #----:  Fixed tab order inside request properties
+    
+    #1026: Ability for Assertions to Wait To Become True
+
+    #1127: Security Warning Dialog Not Dismissed in IE8
+
+    #1128: F4 Should Display DOM View if not Already Open
+    
+    #0671: Ability to Generate Screen Shot of whole Browser
+           Window
+
+    #1126: Search Replace Not Working for Properties on Playing
+           Tab of Items
+
+    #1125: Save Item Using XML or HTML Format Causes Script
+           to be Flagged as Modified When Executed
+    
+    #1123: Support for Querying the Number of Running Threads
+           in a Thread Item via JScript
+
+    #----: Fixed Possible Crash or Data Corruption after Undo / Redo
+    
+    #0563: Control of Precision for Random Increment
+    
+    #1122: Ability to Maximize, Minimize, Hide or Normalize
+           window via JScript
+    
+    #----:  Fixed Windows Vista Displaying Program
+           Compatibility Assistant after Running Badboy Installer in
+           some Situations
+    
+    #----:  updated to new version of visual studio
+    
+    #1121: Responses not Shown for 2nd and Later Thread Items
+           when multiple Thread Items Run Simultaneously
+    
+    #----:  Fix potential crash in playback if attempt to play
+           non-existent item
+    
+    #1111: Spiders Should Automatically Operate in Silent Mode
+    
+    #1108: Recursive Spidering
+    
+    #1112: Enhanced DOM View Element Popup Information
+    
+    #----: Formatting fixes for help for better cross browser
+           compatibility
+    
+    #1113: Assertion 'passed' Property not Accessible via
+           JScript
+    
+    #1114: Navigations Record Incorrect Index when Multiple
+           Identical Links / Buttons on Same Page
+    
+    #1115: HTML Report Sometimes Displays Empty Warnings /
+           Failures
+    
+    #1108: Recursive Spidering
+    
+    #---:  Context Menu Option for Playing Scripts from
+           Explorer Shell
+    
+    #---:  Fixed missing documentation for 'disabled' property
+
+
+CHANGES IN BADBOY 2.0.7
+
+    #1107: Crash when Generating Javascript Reference 
+           Inside Frame
+
+    #1086: Problems Dragging / Dropping Items at 
+           Root Level of Script
+    
+    #1098: Unable to Access Responses for AJAX Requests 
+           using OLE / JScript 
+
+    #1097: Multipart Forms Incorrectly export Parameters to
+           JMeter Encoded causing Double Encoding
+    
+    #1088: Empty TemplateBindings Bloating Size of Saved
+           Scripts
+    
+    #1089: Support for Recording Navigations on Pages which
+           Cancel Event Bubbling
+    
+    #1087: Use Follow-Redirect Option in JMeter for More
+           Reliable Export Playback
+    
+    #1086: Export Referer and Other Default Headers to JMeter
+    
+    #1085: Assertions placed as Children of Requests not
+           Exported to JMeter
+    
+    #1092: Navigations Capture the Wrong Index when Element
+           Clicked is not first in Page
+    
+    #1096: Form Populators should consider Id as well as Name
+           attributes for Identifying Form Elements
+    
+    #1091: Support for Sending Double Click and No Click in
+           Mouse Click Item
+    
+    #1090: Response Check Fails with Unknown Internal Error
+    
+    #1093: Screen Shots Corrupted in Some Email Clients when
+           Sent By Email
+    
+    #1095: Screenshot Line Items missing Name / Description
+           in HTML Report
+    
+    #---:  Added tip on setting export area in Excel to Help,
+           other minor help additions
+    
+CHANGES IN BADBOY 2.0.6.1
+
+    #1075: Security Update (MS08-052 - Critical)
+  
+    #1078: Email Send Failing Possibly with Crash
+
+    #1077: Play Pauses Incorrectly on Steps that are External
+           Tools
+    
+    #1076: DOM View => View Source shows Injected Border Styles
+           not in Source
+    
+    #1074: Crash when Running Threads with Assertions
+           containing Checks other than Content Checks
+
+CHANGES IN BADBOY 2.0.6 
+    
+    #1073: HTTP Status Codes Not Reported for Errors in
+           Detail Report
+    
+    #1072: Highlight Leaf Children with Failed Assertions in
+           Report Script Summary
+    
+    #1056: Report Details Incorrect in Script containing
+           Aggregates with Failures
+    
+    #1070: Disabled Assertions Shown in HTML Report as Passed
+    
+    #1071: Crash when Running MSHTML Threads
+    
+    #1069: Incorrect Response Times Reported for Navigation
+           Items in Threads
+    
+    #1058: After Hitting Break Point Record does Not Complete
+    
+    #1066: Incorrect Report Sent by Scheduled Script
+    
+    #1062:  DOM View Constantly Refreshing
+    
+    #---:  Changes to Help Files to Make them Compatible with
+           being Hosted Online
+    
+    #1068: ThreadNum Variable Not Set in Raw Threads
+    
+    #1057: Viewing Variables in Preferences Overwrites Values
+           in Local Script
+    
+    #1059: Crash When Using F4 to Identify Element on Pages with 
+           Mulitple Cross Domain HTTPS Frames
+    
+    #1053: Easy way to Switch Content Check between Contains
+           and Not Contains ( ~ Key)
+    
+    #1060: Summary Check Fails to Find Items and / or Crashes 
+    
+    #---:  Badboy Failing to Launch from Badboy Agent in Wave
+           Test Manager under Vista
+    
+    #---:  Some Registry Keys Not Deleted when Badboy
+           Uninstalled
+    
+    #1030: Break Points - Temporarily Set a Position for
+           Playback to Stop
+    
+    #1022: Missing Templates or Tools Hang Badboy Agent
+    
+    #----:  Better logging when Content Check Finds Content
+    
+    #1038: Show Target Position of Mouse Click in When Selected
+           in Script Tree
+    
+    #1052: Option to Run in Background for Keys Item
+    
+    #1049: Creating Template and Replacing Test Causes Test
+           Children to Vanish
+    
+    #1050: Test Template Loading Children in Wrong Order
+    
+    #1045: Easy Variable Capture - Quick Button to Create
+           Variable Setters from Selected Text
+    
+    #1047: Ability to Automatically Dismiss Print Dialogs
+    
+    #1046: Server Busy Error when Running Aggregated Scripts
+    
+    #----: Fixed documentation error in JScript item
+    
+    #----: Added "float" to CSS properties available in
+           CSS dialog
+    
+    #1041: Cut / Ctrl-X of First Item in Step sends Selection
+           Back to Top of Script
+    
+    #1039: Drag and Drop Step from Toolbox should Set it as
+           Recording Step
+    
+    #1043: Tests Loading Steps in Incorrect Order with Respect
+           to Template
+    
+CHANGES IN BADBOY 2.0.5 
+    
+    #1027: Use of Many External Tools Causes Slow Loading
+           of Script
+    
+    #1033: Select Option by Label instead of Value
+    
+    #1035: All Playable Items Should Have Set Play Position
+           Here Menu Item
+    
+    #1036: Ability to set Index for Navigation Items via OLE
+           / JScript
+    
+    #1034: Capture Variables for Response Errors and also URL
+           for Javascript Errors
+    
+    #984: Incorrect Step Numbering when Adding Step to Test
+    
+    #1029: Crash Occuring After Exit under Wave Test Manager
+           and Elsewhere
+    
+    #1016: Add as Linked Variable not Replacing Parameter for
+           Empty Variable
+    
+    #1018: Record Filters
+    
+    #1001: Installer is not Silent with /s Option
+
+    #1012: Option Not to Save Variable Value
+    
+    #---:  Fixed potential crash when launching external
+           threads
+    
+    #---: Added missing documentation for formIndex script
+           item property
+    
+    #0996: Bbcmd Fails to Launch Very Large Scripts
+    
+    #1014: Cascade Option for Message Box Item
+    
+    #1013: Generate JScript Reference Crashing
+    
+    #0996: Bbcmd Fails to Launch Very Large Scripts
+    
+    #1008: Report should not show Disabled Steps / Suites
+           / Tests
+    
+    #1005: Crash if Using createObject for some Objects
+    
+    #1007: Navigations with Regex Patterns Failing to Match
+           text in Title, Value, Alt Attributes
+    
+    #1006: Launching External MSHTML Thread on New Script
+           without Saving Fails Silently
+    
+
+CHANGES IN BADBOY 2.0.4 
+
+   FEATURES & UPDATES
+
+     #992: Ctrl+C In Variable View to Copy Variable Value
+
+     #995: Child Items of Spider Item Execute on Spidered Pages 
+
+   BUGS FIXED
+
+     #990: Unable to Access Response Content via JScript
+
+     #988: Content Checks should be Exported to JMeter with Case Insensitive Flag Set
+
+     #993: Requests with Multiple Redirects record only Single Redirect as Subrequest
+
+     #994: JMeter Scripts Containing Parameters with Binary Data Fail to Export 
+     
+     #---:  Plugins may be Duplicated if Installed in both User Location and 
+            Badboy Install Dir
+
+CHANGES IN BADBOY 2.0.3 
+
+   FEATURES & UPDATES
+    
+    #953: Record / Play Back AJAX Requests as Top Level
+          Requests
+
+    #938: Add Clear Responses Option to All Playable Items
+    
+    #952: Improved Formatting of Dates / Times in Responses
+    
+    #944: Recording of Responses from Threads
+    
+    #943: Reduce Flicker when Running Threads and Fix Drawing
+           Blemishes in Tabs
+    
+    #945: Support for Managed External Threads via Wave
+           Test Manager
+
+    #---: Improved HTML Report / Better Compatibility with 
+          Browsers / Email Clients
+    
+    #---: Improved Labels for ScreenShot Items in Script Tree
+    
+    #961: Added Ctrl+Shift+P Hot Key to Open Preferences
+    
+    #960: Improved Help for Thread Items
+    
+    #---: Added Help Topic for using Badboy on AJAX based web sites
+
+    #---: Changed Thread Item Graph Updates to 5000 ms
+
+    #---: Performance Improvement to Graphs when Large Number
+           of Responses
+    
+    #---: Improved labelling of items in Toolbox
+    
+   BUGS FIXED
+    
+    #969: Data Source unable to Load Values from Excel in
+           Vista / Office 2007
+    
+    #---: Scripts with Custom Tools failing to open
+           (regression)
+    
+    #964:  Plugins should Install in User Directory Rather
+           than System Directory
+    
+    #965: Custom Items not Imported to / Updated in Toolbox
+           from External Scripts
+    
+    #967: Items Disappear after using Save as Tool Option and
+           Choosing Replace Option
+
+
+
+    #981: CSV Export Ordered Incorrectly for Scripts with
+          Multiple Steps Played at different Times
+    
+    #980: Badboy Leaving Temporary Files after Viewing Reports
+          or Viewing Response
+    
+    #979: Popup Windows Leak Memory when Closed
+    
+    #978: Non-existent Variable reverts to Blank in Variable
+           Setter Properties
+    
+    #977: Save as Tool in Another Directory Ignores Chosen
+           File Path
+    
+    #972: Popup Requests Opening in Very Large Windows
+    
+    #971: Tool Icons Overlapping Each Other in Toolbox
+    
+    #---:  Thread Graphs Displaying Odd Intervals on X Axis
+    
+    #---: Fixed failure to include response content when saving
+           XML using OLE
+    
+    #982: Crash when using Locate Source / Ctrl-Shift-J
+
+    #970: Failure to Capture Screen Shots on Some Systems
+
+    #967: Items Disappear after using Save as Tool Option and
+           Choosing Replace Option
+    
+    #966: Custom Items sometimes not Expandable
+    
+    #965: Custom Items not Imported to / Updated in Toolbox
+           from External Scripts
+    
+    #959: Thread Item Ignores "Play" Command from Context Menu
+    
+    #955: SubRequests and Parameters of SubRequests Fail to
+           Update after Editing Properties
+    
+    #---: Fixed missing Xml option in help for save ole
+           function
+    
+    #939: Assertion Failure Details not Captured when Script
+           Played with Bbcmd
+    
+    #947: Summary View not Updating when Thread Running
+
+    #977: Save as Tool in Another Directory Ignores Chosen File Path
+
+
+CHANGES IN BADBOY 2.0.2 
+
+   FEATURES & UPDATES
+    
+    #922: Ability to Save Graphs in Reports
+    
+    #921: Display Graph of All Children when Selecting a Step
+    
+    #676: Add Support for exporting Assertions to JMeter
+
+    #918: F4 Key to Locate Element under Mouse Cursor in DOM
+           View and Display CSS Info in Tooltip
+
+    #906: Ability to Clear Variable Value Lists / Reset
+          Variable / Clear All Variables with JScript / OLE
+    
+   BUGS FIXED
+   
+    #910: Assertion ScreenShot Captured for Incorrect Window
+          if Target Window Configured
+    
+    #909: Data Source Format Option Converts Integers
+          Incorrectly for Large Numbers
+    
+    #908: Play Continuing Before Popup Window Load Finished
+          when Main Window Reloads
+    
+    #912: Crash if Recording Multipart Form Submitting to
+          New Window
+    
+    #911: Form Populator Fails to find Form Fields when Names
+          Conflict with Ids of other Page Elements
+
+    #923: External MSHTML Threads Fail when Launched under
+           Wave Test Manager / OLE
+    
+    #919: Crash if Access Attempted to Response via OLE /
+           JScript when no Response Recorded
+    
+    #925: Error when Selecting some ODBC Data Sources in Data
+          Source Item
+    
+    #924: Prevent X-Axis Labels on Graphs from Overlapping
+          Each Other
+
+CHANGES IN BADBOY 2.0.1 
+
+   FEATURES & UPDATES
+
+    #902: Menu Option to Refresh All Templates
+    
+    #898: Badboy OLE Support for Version and Progress
+    
+    #897: Menu Option to add Test to Suite
+
+   BUGS FIXED
+
+    #905: Hang on Navigation with Aborted AJAX Request
+    
+    #901: Refresh Template Causing Duplicate Items
+    
+    #900: Unable to Open Scripts saved with Encoded Responses
+    
+    #899: Items Sometimes Play even though Disabled
+
+    #896: Name and Label not Rendered on Assertions and
+          Requests in Report
+
+CHANGES IN BADBOY 2.0 FINAL RELEASE
+
+   FEATURES & UPDATES
+
+    #789: Ability to use Images and Input Type Image for
+           Navigations
+
+    #874: Remember Screen Position of Badboy Window
+    
+    #---: Added Help for JScript Check
+    
+    #871: Warning / Tip when Saving Responses
+
+    #---: Made JScript Check Dialog Resizable
+
+    #---:  Updates to help for results and jscript items
+
+    #699: Better Generation of References in DOM View -
+          avoided most uses of document.all
+
+   BUGS FIXED
+ 
+    #868: Crash when Capturing Color Check
+
+    #884: Playback Stalling when Pages Load Incompletely
+
+    #882: Standard OLE API not Available on Various Items
+    
+    #867: Log File Churns when Idle on Start Page
+
+    #828: Items Pasting Backwards
+
+    #887: Navigations sometimes Recorded Twice if Message
+          Box Shows
+
+    #870: ScriptItem.at() OLE API Returning Incorrect Results
+           / Crashing
+
+    #886: Record Hangs with Red Request when New Window
+          combined with AJAX Request
+
+    #883: Crash after Having Log View (Server / Request /
+          Badboy) Open for Long Time
+
+    #---:  Updated and corrected help on Navigations, OLE API,
+           basic operation
+
+    #876: Script Items Sometimes Disappearing when Dragged /
+           Dropped in Script Tree
+    
+    #875: Blank or Incorrect Responses Recorded for AJAX
+           Requests
+    
+    #877: Install Artifacts (eg. Shortcuts) Created in
+          Incorrect Locations for non-English Locales
+
+    #---: Check For Updates Menu Option Failing
+    
+    #878: Unable to Enter Long User-Agent into Preferences
+
+    #873: Pressing Navigation Mode Toolbar Button and Using
+          URL Bar to Navigate Records Blank Navigation
+ 
+    #869: Long-Lived XMLHttpRequests Causing Navigations to
+          Fail to Record
+
+    #---: Changed Thread Items to Default to Fixed Duration
+           (less confusing)
+
+    #872: Errors Still Flagged even if Excluded for Recorded
+           Items
+
+    #880: UTF-8 Pages with Unencodable Chars in Parameters Failing
+          to Encode
+
+    #623: Missing Template should Display Error
+
+    #---: Incorrect Status Bar Message for Preferences
+           Menu Item
+
+CHANGES IN BADBOY 2.0 BETA 11
+
+   FEATURES & UPDATES
+    #728: Search / Replace constrained to Specific Properties
+    
+    #528: Resizable Dialogs: Spider Plan and JScript Item
+           Properties
+    
+    #717: Add Browser Refresh Button and Control-R to Reload
+
+    #861: Support for Index Form Values:  Form Populator 
+          Detects non-Unique Name / Id and uses Indexed 
+          Elements
+    
+    #858: Support for Alt-D Convention for Focusing / Editing
+           URL Bar
+BUGS FIXED
+
+    #859: View Diff with Capture Output Option shows Corrupted
+           Output
+
+    #862: Timer Waits Incorrect Intervals when Badboy run in
+           Virtual PC
+    
+    #863: Navigation with Hardware Mouse Click Targets Wrong
+           Location if Window Scrolled
+    
+    #---: Form Value Index Spin Button Increments Wrong Field
+
+    #860: Javacript References Generated using Blank Element
+          Names
+
+    #---: URL Bar Sometimes Replaces URL while Typing
+
+    #864: Navigations Failing in IE5.0
+    
+    #865: Crash when Running Threads
+    
+    #866: Unable to Find Navigation Reference or Filter
+          via Search
+
+CHANGES IN BADBOY 2.0 BETA 10
+    
+   FEATURES & UPDATES
+    
+    #845: Support for Subsituting File Content in File Uploads
+    
+    #848: Ability to Highlight Navigation Target in Page
+
+    #---: Ability to Use Regular Expressions in Navigations
+    
+    #849: Ability to send Hardware Mouse Clicks for Navigations
+
+   BUGS FIXED
+
+    #847: Visible Text Navigations not Working for Text Inside
+          Nested Tags
+
+    #846: Navigations not Triggering MouseDown / MouseUp Events
+    
+
+CHANGES IN BADBOY 2.0 BETA 9
+    
+   FEATURES & UPDATES
+    #718: Add Option to Always Display Current URL in URL Bar
+
+    #641 - Support for User Provided Plugins to Enhance
+           Badboy - added support for auto-installation, added name
+           to plugin.browser method.
+
+    #641 - Support for User Provided Plugins to Enhance Badboy
+           - added showPopup and execScript to plugin API
+    
+   BUGS FIXED
+    
+    #841: Crash if Executing Threads in Unsaved File
+
+    #840: Variable View Flashes and Scrolls During Playback
+    
+    #--- - Fixed Requests being created as Sub Requests by
+           default in Scripting API
+    
+    #839: Crash when Executing Thread Items
+    
+    #838: Crash when Applying Some Templates
+    
+    #837: HTML Report Columns not Centered in FireFox
+
+    #835: Relative Paths with Sub Directories not Resolved
+          Correctly in Scripts
+    
+    #834: Navigations Ignore reference and referenceType
+           Properties when set from JScript
+
+    #776: Large Size (>1MB) Content Hangs During Download
+           / Display
+
+CHANGES IN BADBOY 2.0 BETA 8
+  
+   FEATURES & UPDATES
+
+    #588: Ability to retrieve/manipulate Script Items in JScript 
+             - fixed JScript items failing to support
+               standard OLE properties and methods 
+             - added support for id property on all 
+               script items
+
+    #831: Support for Indexed Navigations (Use specified
+          Occurrence of Element on Page)
+   
+    #641: Support for User Provided Plugins to Enhance Badboy -
+          support for tick method
+   
+    #816: Ability to Use Variables and Regexes in Form
+          Populators
+   
+    #824: Display of Badboy Log and Server Log File in DOM
+          View with Draggable Tabs
+
+   BUGS FIXED
+    #825: Crash when Browsing with DOM View Open when Child
+           Frames Error with no Response
+    
+    #744: Enabling XMLHttpRequest Causing Javascript Errors
+    
+    #826: Crash when Applying or OK to changes in Navigation
+           Properties
+    
+    #830: Unable to load 1.x Scripts containing Auto Incremented
+          Variables
+
+    #833: Hot Keys not Working when Focus in URL Bar
+    
+    #804: Paste onto Thread Item should Place Item Inside not
+          as Sibling
+    
+    #829: Unable to Drag / Drob Check into Assertion
+    
+    #827: Possible Crash when Browsing Pages containing
+           Inaccessible Child Frames
+    
+    #823: Items sometimes Disappearing when Dragged / Dropped
+    
+    #---: Changed HTML Help to keep Image tags on single line
+           (Workaround for Printing Bug)
+    
+
+CHANGES IN BADBOY 2.0 BETA 7
+  
+   FEATURES & UPDATES
+  
+    #641: Support for User Provided Plugins to Enhance Badboy:
+           Ability to get / set preferences via OLE / JScript
+  
+   BUGS FIXED
+
+    #822: Crash when Adding Navigation from Toolbox and
+          Leaving Reference Type Unselected
+
+    #821: Should Select Next Item after Deleting from Script
+          Tree
+    
+    #820: Disabled Steps may Incorrectly Abort Parent Step
+          Loops
+    
+    #817: Abort Current Step Option may Incorrectly Abort
+          Parent Steps
+  
+CHANGES IN BADBOY 2.0 BETA 6
+
+   FEATURES & UPDATES
+    #799: Ability to Configure Wait Time for Message Box Items
+    
+    #794: Option to Edit External Tool from Toolbox
+  
+    #798: Support for Setting Recording Step via JScript / OLE
+
+    #641: Support for User Provided Plugins to Enhance Badboy:
+            - ability to add tool bar buttons via plugins
+            - support for custom icons for plugin provided tools
+       
+    #810: Ability to Ignore Errors on Specific Items in Script
+
+    #803: JScript / OLE Function for Retrieving Responses
+
+   BUGS FIXED
+
+    #814: Clear Responses should Reset Assertions to 
+          non-Duplicated State 
+       
+    #802: Possible Crash when non-HTML Content Embedded as
+          Child Frame in HTML Page
+
+    #806: Report Truncating Trailing Zeros from Summary Values
+       
+    #809: Navigations should Prefer Name or Id Reference in
+           Navigations to Visible Text for Select Controls
+    
+    #807: Response Errors causing Badboy Script to Hang
+           in Playback
+ 
+    #758: Report Sometimes Failing to Show with 'Invalid
+          Character in Text Content' Error (Re-Opened/Fixed)
+
+    #796: Assertion/Timeout Abort Step Option and Disabled Steps 
+          not Working Correctly in Threads
+    
+    #805: Add New Step adding Steps in Wrong Places
+    
+    #812: Possible Crash when Converting Step to Thread Item
+    
+    #---:  Thread Item labels jump around sometimes in
+           strange way
+    
+    #811: Failures in Aggregated Items not Showing in Report
+    
+    #---: Flicker when Summary View changes
+    
+    #813: Excessive Flicker in Script Tree when Playing
+
+    #795: File Upload not Recording Correctly
+
+    #792: Unable to Create Navigations from DOM View
+    
+    #801: Ctrl-Z / Undo Keys Not Working in Dom View Script
+          Editor
+
+    #791: Selection in Wrong Place after Deleting from
+          Script Tree
+    
+    #800: Upgrade Required Dialog has Incorrect Colors and IE
+          Error Displayed in Background
+
+    #793: Right Click on Test => Edit Template Not Working
+  
+    #790: Delete Key not Undoing
+       
+    #---: Fixes for potential crashes in XHR handling
+    
+    #---: Missing documentation for Response script item
+           properties
+ 
+    #---: Unable to access Response properties via JScript
+
+CHANGES IN BADBOY 2.0 BETA 5
+
+   FEATURES & UPDATES
+
+    #781: Support for Capturing Screenshots of MSHTML Threads
+
+    #787: Better Handling of Window Close for Anonymous Windows
+    
+    #765: Ability to Disable a Test or Suite
+
+   BUGS FIXED
+   
+    #788: CRITICAL - Parameters Saved with $,{,} Characters Loaded
+          with Invalid Trailing Data from *.bx Format
+
+    #786: Request => Insert Step Not Working Sometimes Crashes
+    
+    #785: Assertions only Failing Once in MSHTML Threads
+    
+    #784: External Threads Leave bbcmd Processes Running if
+          Badboy Closed
+
+    #---: Thread Items Sometimes Display Blank Label
+    
+    #---: Potential Crashes in MSHTML Threads
+    
+    #779: Deeply Nested Child Frame not Found by Spider when
+          Explicitly Specified
+    
+    #778: External Tool Reference with Absolute Path not
+           Resolved Relative to Script
+    
+    #777: Missing External Tool or Template may Cause Crash
+          on Opening File
+    
+    #775: MSHTML Engines open IE Instances for Popup Windows
+    
+    #782: Script Tree sometimes Disappearing after Undo
+    
+
+CHANGES IN BADBOY 2.0 BETA 4
+
+   FEATURES & UPDATES
+    #766: Support for Random Wait Time for Timers
+
+    #774: Ability to set Properties for Default Tools in
+          Toolbox
+
+    #769: Clearer Handling of File Locations when Saving
+          External Tools
+
+    #772: Improved JScript Interaction with Script Tree: Add,
+          Remove Items, Access Children by Index, Length Property
+
+   BUGS FIXED
+
+    #773: Possible Crash when PDF or other non-Browser Content
+          Displayed in Playback
+
+    #767: Crash when Running External MSHTML Threads with
+          Port Conflict
+
+    #770: Crash when Exiting
+
+    #768: Failure to Substitute Variables in Javascript
+          Navigations
+
+    #771: Cascading Items failing to Cascade when Placed as
+          child of Suite or Test
+
+CHANGES IN BADBOY 2.0 BETA 3
+
+   FEATURES & UPDATES
+    #641: Support for User Provided Plugins to Enhance Badboy 
+
+          - support for binding keys to javascript functions in 
+            plugins
+    
+          - support for plugin views as tabs and saving / restoring
+            layout
+
+          - support for adding toolbox tools using plugin interface
+
+    #416: Make JScript dialog resizable in DOM View
+      
+    #750: Need Access to Current Play Item from JScript
+    
+    #756: Support for Resizable Regex Helper Dialog
+  
+   BUGS FIXED
+ 
+
+    #762: Multipart Form Parameters Loading Incorrectly from
+          Old Scripts
+
+    #761: Scripts Corrupted after Selecting with Mouse and
+          Copy Paste Multiple Items
+    
+    #757: Undo causing Script Tree to Disappear or Rearrange
+          Items
+  
+    #753: Delete Option Disabled on External Items in Toolbox
+  
+    #759: Crash when Attempting to Locate Source (if not found)
+
+    #751: Javascript References Failing to Execute with
+          Internal Error
+    
+    #752: Dragging Item sometimes causes Script Tree to
+          go Blank
+  
+    #749: Unable to Create Custom Tools by Dragging and
+          Dropping
+    
+    #748: URL Bar Squashed too Small on Install with Small
+          Screen Resolution
+ 
+    #758: Report Sometimes Failing to Show with 'Invalid
+           Character in Text Content' Error
+  
+CHANGES IN BADBOY 2.0 BETA 2
+
+   FEATURES & UPDATES
+    
+    #733: Support for Test Suites - updated icon, added
+          preference for default root, added Play Whole Suite,
+          Set Playmerker here menu options
+
+    #737: Ability for Navigations to Record / Remember Multiple
+           Reference Types
+    
+   BUGS FIXED
+    
+    #747: Navigations on Elements with onclick do not Trigger
+          onclick Event
+
+    #741: Checkbox not Captured in Form Populator when
+           Recording Navigation
+    
+    #726: Paste Parameter onto Request should Paste Inside
+          not as Sibling
+
+    #745: Paste / Drop onto Test Pastes as Sibling instead
+          of Child
+
+    #735: Missing DLL Function Error on Windows 2000
+    
+    #743: Bbcmd does not Print Summary Report
+    
+    #---: Fixed incorrect names of items in debug log
+    
+    #740: Drag / Drop to Step that is External Tool Drops
+          Inside it
+    
+    #739: Pasting onto Step that is External Tool Pastes
+           Inside it
+    
+    #742: Assertion Failures described Incorrectly in HTML Report
+    
+    #---: Thread Item Properties not enabling Apply Button
+           when Changes Made
+    
+    #738: Installer not Associating .bb Extension with Badboy
+           (Files not opening with Double Click)
+    
+
+CHANGES IN BADBOY 2.0 BETA 1
+
+   FEATURES & UPDATES
+
+    #724: Support for Populating Form Fields outside Forms
+
+    #636: Support for External MSHTML Threads -
+          Run as External Process allowing independent cookies
+  
+    #733: Support for Test Suites
+    
+   BUGS FIXED
+
+    #727: Playback should Pause on Tests when in Played in
+          Step Mode
+
+    #723: Pasting Multiple Items into Step Pastes them in
+          Reverse Order
+
+    #715: Select Multiple Items + Delete only Deletes Single
+           Item
+  
+    #722: Variables sometimes not Displayed after File Open
+  
+    #636: Support for External MSHTML Threads -
+          Numerous bug fixes - support for Navigations, Form 
+          Populators, Fixed missing threadNum variable
+ 
+    #---: Fixed potential crash if missing preference accessed
+  
+    #--- - Incorrect Icon for Tests when Play Marker on them
+
+    #730: Search Replace finds Invisible Items
+
+    #--- - Fixed potential crash on startup when invalid
+           tools present
+
+    #713: Unable to Drag Top Level Tests to Different Order
+
+    #692: Rare Crash when Clearing Responses
+    
+    #725: DOM View sometimes not Displaying Unicode Characters
+          Correctly (eg. Greek)
+    
+CHANGES IN BADBOY 2.0 ALPHA 4
+
+   FEATURES & UPDATES
+    #690 - Toolbar Button to Toggle Auto-Synchronize Mode
+
+    #691 - Ability to use Checks as Conditions for Timers
+    
+    #711 - Make Requests waiting for Sub Requests Optional -
+           OFF by Default
+
+    #699 - Better Generation of References in DOM View for
+           Form Elements
+    
+    #698 - Add Linked Variable Option on Form Values
+    
+    #696 - Add Option to Select Frame for JScript Item
+    
+    #694 - Switch Frames in DOM View using Ctrl-Page-Up /
+           Ctrl-Page-Down
+    
+    #--- - Added Help for Timers
+
+    #685 - Display of JavaScript Errors in Status Bar
+    
+   BUGS FIXED
+    
+    #669 - Timing Report - Display Detailed Breakdown and
+           Timing of Page Load - fixed regression causing 
+           errors in generation / blank pages
+
+    #689 - Incorrect Error Message when Variable Check Fails
+
+    #714 - Docked Views Failing to Fill Full Height
+
+    #--- - Incorrect label in Thread Item Properties Dialog
+    
+    #662 - CSV Export not Working
+    
+    #693 - Unable to Open *.bb Scripts Saved by Save Item
+
+    #--- - Incorrect drop behavior of Variable Check and
+           JScript Check when dropped inside Assertion
+    
+    #684 - Variables with Auto-Update Expression Leak Data
+           Sources Creating Large Scripts
+
+    #683 - Copy then Paste or Drag and Dropping Tool Loses
+           Shortcut Icon
+
+    #700 - DOM View Generate JavaScript Reference Copies
+           Corrupted Data to Clipboard
+    
+    #--- - Fixed incorrect help for script item property
+           reference
+
+    #664 - JScript Check Failing to Check ALL Frames
+    
+    #707 - Rare Crash when Selecting Data Source or Executing
+           Data Source Item
+    
+    #712 - Step => Insert => Sibling Step Creates Step in
+           Wrong Place
+
+    #626 - External Item Tool in Toolbox not Functional
+    
+    #702 - External Items should not be Expanded by Default
+           in Script
+
+    #--- - External Step should not be set as Recording Step
+    
+    
+
+CHANGES IN BADBOY 2.0 ALPHA 3
+
+   MAJOR ITEMS
+
+     #340 - Support for Multiselect for Script Tree (Select
+            multiple items and drag / drop )
+     
+     #672 - Ability to Drag and Drop Tabs to Different Locations
+   
+     #666 - Remember Expanded / Unexpanded State of Tests
+            and Steps
+     
+     #669 - Timing Report - Display Detailed Breakdown and
+            Timing of Page Load
+     
+     #657 - Annotation of Script Items with Icons for Warnings 
+            and Errors in Script Tree
+
+   MINOR ITEMS
+
+     #677 - Update Report to Generate Directly from new Badboy
+            XML Format - added preference to control, other 
+            refinements
+
+     #674 - Ability to Drag/Drop HTML Files into Badboy or as
+            File Argument from Command Line
+
+     #--- - Improved error handing and reporting for XSL
+                transforms
+
+     #--- - Improved shaded icons for steps and responses, and main
+            toolbar
+     
+     #663 - Show Error Responses and Assertions Failures for
+            Thread Items
+     
+     #656 - Occasional Failure to Capture Navigation when Multiple 
+            Nested Frames Exist
+     
+     #273 - Add insertion mark when dragging and dropping
+
+     #655 - Ability to Drag and Drop between Badboy Instances
+
+
+   BUGS FIXED
+
+     #680 - Viewing Report should not Record File URL
+
+     #681 - Variable View sometimes showing Old Values
+
+     #668 - Values Truncated when Loaded from ODBC Sources
+
+     #682 - Crash if Script References Corrupted or Invalid
+            Template File
+
+     #679 - Unable to View Report after Recording File URL 
+
+     #675 - Badboy Crashes and behaves Erratically if File or
+            Image Dropped on its Window
+
+     #678 - Calling OLE Method badboy.quit() crashing Badboy
+
+     #--- - Potential Crash in Pages with Links that have no
+            href or target
+
+     #673 - Potential Crash when DOM View Open
+     
+     #--- - Occasional Javascript errors when attempting auto-completion
+            in JScript editors
+
+     #665 - Raw Background Threads sometimes Failing to find
+            Named Frames
+     
+     #664 - JScript Check Failing to Check ALL Frames
+
+     #661 - Unable to create OLE Instances of Badboy from .NET
+     
+     #617 - Crash when Running Aggregated Scripts
+
+     #680 - Viewing Report should not Record File URL 
+     
+CHANGES IN BADBOY 2.0 ALPHA 2
+
+This is a highly important bug fix release for anybody using Badboy 2.0
+Alpha 1.  It fixes a number of critical crashes and feature regressions
+reported by users.
+
+   MAJOR ITEMS
+
+   MINOR ITEMS
+    #--- - Added Preference to Enable/Disable XMLHttpRequest
+           Interception
+    
+    #647 - Better Looking Graphical Buttons for URL Bar
+
+    #648 - Window Control Option to Close All Popup Windows
+    
+    #--- - Added script item property reference to help,
+           fixed bug in setting dates/times
+
+   BUGS FIXED
+    #654 - Possible Crash when Playback Encounters non-HTML
+           or Invalid Page
+    
+    #653 - Incorrect Text / Characters read from ODBC Data
+           Sources
+    
+    #607 - Variable View - Deleting last Variable not working
+           properly
+    
+    #652 - Possible/Rare Crash when Opening Scripts
+    
+    #645 - Content Check not finding Body Content more than
+           2 Levels Deep in Frames (Merge from 1.6U2/1.7)
+    
+    #651 - Crash when Loading Scripts containing Assertion
+           Failures
+    
+    #650 - Crash when Viewing Browser Cookies
+    
+    #649 - Exporting in JMeter Format causing Crash
+    
+    #646: Variable Setter Failing to find Nested Target Frames
+
+  
+CHANGES IN BADBOY 2.0 ALPHA 1
+
+This is a major revision of Badboy having been rebuilt from the
+ground up with unicode support and a new XML file format for saving 
+scripts.
+
+   MAJOR ITEMS
+
+    #643 - Added support for detecting, recording playing back
+         and XMLHttpRequests
+
+    #644 - Support for Maximum Iterations in Thread Item
+
+    #636 - Support for Rich MSHTML Based Background Threads -
+    
+    #641 - Support for User Provided Plugins to Enhance Badboy
+
+    #605 - Support for Tests and Test Templates
+
+    #626 - External Toolbox Items
+
+    #629 - Crash when Selecting DOM Element after Clicking
+           Filter Checkbox
+
+    #--- - Migrated core code into DLL (faster load and smaller
+           memory footprint)
+
+   SMALL FEATURES
+    #630 - Display of Color at Mouse Location in DOM View
+
+    #--- - Added H Elements to Selection dialog for DOM View
+
+    #620 - Click Item Window Name should Accept Variables
+
+   BUG FIXES
+
+    #--- - Pasting of Form Values should Paste inside not next
+         to Form Populator
+
+OTHER CHANGES
+
+
+COMPATIBILITY NOTES
+  - Newer releases of Badboy ALWAYS maintain ability to read OLDER
+    Badboy scripts.  However files saved with a newer version
+    CANNOT usually be read by older versions.  Please BACK UP your
+    important Badboy scripts when upgrading.
